@@ -37,6 +37,7 @@ jobs:
       # 自动获取天气信息
       - name: 'Get Weather'
         run: bash ./weather.sh
+      # 自定义 env, $GITHUB_ENV => ${{env.REPORT_DATE}}
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       # 自动发送邮件
@@ -59,7 +60,6 @@ jobs:
       # test
       - name: 'Print Name bug'
         run: |
-          echo "ecrets.MAIL_USERNAME ="
-          echo ${{ secrets.MAIL_USERNAME }}
-          echo $secrets.MAIL_USERNAME
-          echo "$secrets.MAIL_USERNAME"
+          echo "secrets.MAILUSERNAME = $secrets.MAILUSERNAME"
+          echo mailname = ${{ secrets.MAILUSERNAME }}
+          echo mailname = $secrets.MAILUSERNAME
