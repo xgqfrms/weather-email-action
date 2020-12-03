@@ -52,14 +52,14 @@ jobs:
           # fix secrets name bug ✅
           subject: Shanghai Weather Report (${{env.REPORT_DATE}})
           body: file://result.html
-          to: xgqfrms@gmail.com
+          to: ${{ secrets.MAILTO }}
           from: GitHub Actions
           content_type: text/html
 
       # test
-      - name: 'Print Name'
+      - name: 'Print Name bug'
         run: |
           echo "ecrets.MAIL_USERNAME ="
           echo ${{ secrets.MAIL_USERNAME }}
-          echo "MAIL_USERNAME ="
+          echo $secrets.MAIL_USERNAME
           echo "$secrets.MAIL_USERNAME"
