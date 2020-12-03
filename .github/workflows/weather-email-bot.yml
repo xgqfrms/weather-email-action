@@ -60,6 +60,4 @@ jobs:
       # test
       - name: 'Print Name bug'
         run: |
-          echo "secrets.MAILUSERNAME = $secrets.MAILUSERNAME"
-          echo mailname = ${{ secrets.MAILUSERNAME }}
-          echo mailname = $secrets.MAILUSERNAME
+          echo "secrets.MAILUSERNAME = " ${{ secrets.MAILUSERNAME }}
