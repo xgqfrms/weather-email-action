@@ -52,3 +52,11 @@ jobs:
           to: xgqfrms@gmail.com
           from: GitHub Actions
           content_type: text/html
+
+      # test
+      - name: 'Print Name'
+        run: |
+          echo "ecrets.MAIL_USERNAME ="
+          echo ${{ secrets.MAIL_USERNAME }}
+          echo "MAIL_USERNAME ="
+          echo "$secrets.MAIL_USERNAME"
