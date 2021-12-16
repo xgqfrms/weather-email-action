@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push events but only for the main branch
   push:
     branches: [ main ]
-  schedule:
-    - cron: '00 00 * * *'
+#   schedule:
+#     - cron: '00 00 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
