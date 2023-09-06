@@ -52,10 +52,10 @@ jobs:
           password: ${{ secrets.MAILPASSWORD }}
           # fix secrets name bug ✅
           subject: Shanghai Weather Report (${{env.REPORT_DATE}})
-          body: file://result.html
+          html_body: file://result.html
           to: ${{ secrets.MAILTO }}
           from: GitHub Actions
-          content_type: text/html
+          # content_type: text/html
 
       # test
       - name: 'Print Name bug'
