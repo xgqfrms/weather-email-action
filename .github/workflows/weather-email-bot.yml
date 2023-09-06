@@ -61,3 +61,6 @@ jobs:
       - name: 'Print Name bug'
         run: |
           echo "secrets.MAILUSERNAME = " ${{ secrets.MAILUSERNAME }}
+      - name: 'Print Name bug'
+        run: |
+          echo "❓ env.REPORT_DATE = " ${{env.REPORT_DATE}}
